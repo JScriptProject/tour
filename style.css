@@ -1,0 +1,362 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+
+
+@font-face {
+    font-family: 'rj'; /* Name your font */
+    src: url('assets/font/Rejouice-Headline.woff2') format('truetype'); /* Path to the font file */
+  }
+
+  @font-face {
+    font-family: 'nb'; /* Name your font */
+    src: url('assets/font/NBInternationalProBoo.woff2') format('truetype'); /* Path to the font file */
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "rj";
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#page1{
+    height:100vh;
+    width: 100%;
+    position: relative;
+}
+.cursor{
+    height: 7vw;
+    width: 7vw;
+    background-color: #ff5f38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+.cursor h5{
+    font-weight: 100;
+}
+
+#page1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.page1-content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-bottom: 1vw; */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw 3vw;
+
+}
+
+
+nav h3{
+    font-size: 1.4vw;
+}
+
+nav h4{
+    font-size: 1.2vw;
+    font-family: "nb";
+    font-weight: 100;
+}
+
+.page1-content h1{
+    font-family: "rj";
+    font-size: 23vw;
+    color: #fafafa;
+    font-weight: 100;
+    line-height: 20vw;
+}
+
+.page1-content h1 span{
+    font-family: "rj";
+}
+
+/* Page2 */
+
+.page2{
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    padding: 5vw 3vw;
+}
+
+.page-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-block: 20px;
+
+}
+
+.page-heading h4{
+    font-family: "nb";
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+hr{
+    height: 0.5px;
+    background-color: rgba(32, 32, 32, 0.486);
+    border:none
+}
+
+.description{
+    font-family: "rj";
+    padding-block: 20px;
+    font-weight: 400;
+
+    overflow: hidden;
+}
+
+.anim-para{
+    display: inline-block;
+    transform: translateY(50px) scale(0.7) rotateX(100deg);
+    opacity: 1; /* Start invisible */
+    padding-top: 10px; /* Start with padding */
+}
+.desc-xxl-font{
+    font-size: 3.9vw;
+    line-height: 1.35;
+}
+
+
+
+/* page3 */
+.page3{
+    height: 100%;
+    
+    width:100%;
+    position: relative;
+    padding: 3vw;
+}
+
+.page3-top
+{
+    text-align: center;
+    position: relative;
+}
+
+.page3-top h4{
+    font-size: 1vw;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.page3-top h4 span{
+    font-size: 0.7vw;
+    background-color: black;
+    color: white;
+    padding: 4.5px 8px;
+    border-radius: 15px;
+}
+
+.page3-top h2{
+    font-size: 4vw;
+    font-weight: 500;
+    font-family: 'nb';
+}
+.anim-head{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.anim-head::before{
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 100%;
+   height: 7px;
+   background-color: black;
+   border-radius: 10px;
+}
+
+.anim-head::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: var(--after-left, 0%);
+    width:20px;
+    height: 7px;
+    background-color: #ff5f38;
+    border-radius: 10px;
+ }
+
+
+.page3-element{
+    width: 100%;
+    height: 600px;
+    margin-top: 8vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box{
+    height: 600px;
+    position: relative;
+}
+
+.box .box-text{
+    position: absolute;
+    text-align: center;
+    transform: translateY(50%);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.6s;
+}
+
+.box .box-text span{
+    font-size: 45px;
+    color: #fff;
+    font-family: 'rj';
+    font-weight: 200;
+    padding: 30px;
+    transition: all 0.6s;
+
+}
+
+.box:hover .box-text{
+    transform: translateY(90%);
+}
+.box:hover .box-text span{
+    color: #fff;
+    font-size: 25px;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3-element .box:hover img{
+    opacity: 0;
+}
+
+/* middle page */
+
+.middle-page-text{
+    margin-top: 2vw;
+    background-color: black;
+    padding-block:0vw ;
+    line-height: 1.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;height: 9vw;
+    overflow: visible;
+}
+
+.rolling-text{
+    text-wrap: nowrap;
+    font-size: 4vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff5f38;
+    font-family: "Rubik Vinyl", serif;
+    transform: translateX(30%);
+    opacity: 0;
+}
+
+.page4{
+    padding: 3vw;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.page5{
+ padding-block: 3vw;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.page5 .page-top {
+    margin-bottom: 1vw;
+    padding-inline: 3vw;
+}
+
+.page5 .page-top h2{
+    font-size: 8vw;
+    font-family: "rj";
+    font-weight: 500;
+}
+
+.page5 .swiperdiv{
+    height: 30vw;
+    width: 100%;
+}
+
+/* swipper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out 0.6s;
+    cursor: pointer;
+  }
+
+  .swiper-slide:hover img
+  {
+    transform: scale(1.2);
+  }
+
+
+  /* page6 */
+  .page6{
+    height: 100vh;
+  }
