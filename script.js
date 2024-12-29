@@ -141,7 +141,7 @@ function underlineAnim1(){
                 start: "top 75%",
                 end: "top 25%",
                 scrub: true,
-                markers: true, // Show markers for debugging
+                markers: false, // Show markers for debugging
               },
             }
           );
