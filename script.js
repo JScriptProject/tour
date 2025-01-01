@@ -34,6 +34,16 @@ function locomotiveScroll(){
 
 locomotiveScroll();
 
+///////////////////////////////////////////////////////
+
+// nav toggle 
+
+let navBtn = document.querySelector(".menu-label");
+
+navBtn.addEventListener("click", function(){
+   document.querySelector(".nav-wrapped").classList.toggle("nav-toggle"); 
+})
+
 
 ///////////////////////////////////////////////////////
 
@@ -163,3 +173,48 @@ let swiper = new Swiper(".mySwiper", {
   });
 
 
+
+
+//   Loader 
+let t1 = gsap.timeline();
+
+t1.from(".loader h3",{
+    x:"40px",
+    opacity:1,
+    duration:1,
+    stagger:0.1
+})
+
+t1.to(".loader h3",{
+    opacity:0,
+    x:"-10px",
+    duration:1,
+    stagger:0.1
+})
+
+t1.to(".loader",{
+   opacity:0
+})
+
+// load the h1
+
+t1.from(".heading-h1 span",{
+    y:300,
+    stagger:0.1,
+    duration:0.5,
+    delay:-0.5
+})
+
+t1.to(".loader",{
+    display:"none"
+ })
+
+
+ // load the h1
+
+t1.from(".heading-h2 span",{
+    y:300,
+    stagger:0.1,
+    duration:0.5,
+    delay:-0.5
+})
